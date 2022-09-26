@@ -15,9 +15,6 @@ task2: src/utils.o src/task2.o
 	g++ -Wall -g -o  task2 src/task2.o src/utils.o -pthread -lrt -lstdc++fs -std=c++17 -fno-stack-protector
 
 
-clean_obj:
-	rm -f ./src/*.0
-	
 task1: src/utils.o src/task1.o
 	g++ -Wall -g -o  task1 src/task1.o src/utils.o -pthread -lrt -lstdc++fs -std=c++17
 	clean_obj
