@@ -2,7 +2,7 @@
 #include "utils.hpp"
 #include <queue>
 #include <unistd.h>
-
+#define MESSAGE_DELAY 1000000
 std::vector<std::string> globalVec;
 bool serverComplete = false; // flag for if the server has exhausted all strings.
 std::map<int, int> counter;
@@ -64,7 +64,7 @@ void *counterOutput(void *arg)
 {
     while (true)
     {
-        usleep(1000000);
+        usleep(MESSAGE_DELAY);
         std::cout << "Counter Summary" << std::endl;
         for (auto const &x : counter)
         {

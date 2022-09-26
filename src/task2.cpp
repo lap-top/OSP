@@ -46,6 +46,7 @@ void reduce2(std::ofstream &output)
         if (lengthMap[smallestMapIndex]->size() == index[smallestMapIndex])
             lengthMap.erase(smallestMapIndex);
     }
+     std::cout << "Reduce Complete, Thanks :)" << std::endl; 
 }
 
 void map2(std::ifstream &input, std::ofstream &output, mVec &lengthMap)
@@ -95,9 +96,8 @@ void map2(std::ifstream &input, std::ofstream &output, mVec &lengthMap)
     }
 
     // Wait until all processes  have finish
-    while (wait(NULL) > 0)
-        ;
-
+    while (wait(NULL) > 0);
+    std::cout << "Executing reduce function" << std::endl; 
     /// merge sort
     reduce2(output);
 }
@@ -106,7 +106,7 @@ int main(int argc, char *argv[])
 {
     if (argc < EXPECTED_ARGS)
     {
-        std::cerr << "ERROR: expected input and output file name as arguments: dirty.txt clean.txt" << std::endl;
+        std::cerr << "ERROR: expected input and output file name as arguments i.e: ./task2 dirty.txt clean.txt" << std::endl;
         return EXIT_FAILURE;
     }
 

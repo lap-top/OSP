@@ -53,6 +53,7 @@ void reduce3(std::ofstream &output)
             indexMap.erase(lowestIndex);
         }
     }
+    std::cout << "Reduce Complete, Thanks :)" << std::endl; 
 }
 void map3(std::ifstream &input, std::ofstream &output)
 {
@@ -86,14 +87,16 @@ void map3(std::ifstream &input, std::ofstream &output)
     std::chrono::duration<double> elapsed = finish - start;
     std::cout << "Total running time of threads time: " << elapsed.count() << std::endl;
     // CALL REDUCE FUNCTION
+    std::cout << "Executing reduce function" << std::endl; 
     reduce3(output);
+    
 }
 
 int main(int argc, char *argv[])
 {
     if (argc < EXPECTED_ARGS)
     {
-        std::cerr << "ERROR: expected input and output file name as arguments: dirty.txt clean.txt" << std::endl;
+        std::cerr << "ERROR: expected input and output file name as arguments i.e: ./task3 dirty.txt clean.txt" << std::endl;
         return EXIT_FAILURE;
     }
 
