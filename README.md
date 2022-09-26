@@ -7,14 +7,14 @@ To run task1-4 executables
 To run task5:
 ./task5_server ./dirty.txt | ./task5
 
-##Make Commands
-###Build all task
+## Make Commands
+### Build all task
 make
-###Build Task one by one
+### Build Task one by one
 make: task1
 make: task2
 make: task3
 make: task4
 make task5
-###Clean
+### Clean
 make clean
