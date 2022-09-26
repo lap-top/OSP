@@ -12,10 +12,10 @@
 ### Build all task
 - make
 ### Build Task one by one
-- make: task1
-- make: task2
-- make: task3
-- make: task4
+- make task1
+- make task2
+- make task3
+- make task4
 - make task5
 ### Clean
 make clean
