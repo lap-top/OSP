@@ -4,9 +4,9 @@
 - Task executables will be found in root directory.
 ## Running Executables (build me first)
 ### To run task1-4 executables
-./taskN ./dirty.txt ./ouput.txt (where N is the task number
+./taskN dirty.txt ouput.txt (where N is the task number
 ### To run task5:
-./task5_server ./dirty.txt | ./task5
+./task5_server dirty.txt | ./task5
 
 ## Make Commands
 ### Build all task
