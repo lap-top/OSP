@@ -1,5 +1,3 @@
-# remove invalid characters
-# uniq
 cat ./dirty/* > dirty.txt
 cp dirty.txt  clean.txt
 sed -i s/[^[:alpha:]]//g clean.txt
